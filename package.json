@@ -4,7 +4,8 @@
   "description": "A chrome extension for controlling hue lights.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --colors --watch --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,15 @@
   },
   "homepage": "https://github.com/Kylerchrdsn/hue_chrome#readme",
   "devDependencies": {
+    "autoprefixer": "*",
+    "babel-core": "*",
     "babel-loader": "*",
     "babel-preset-es2015": "*",
     "babel-preset-react": "*",
     "css-loader": "*",
+    "postcss-loader": "*",
+    "postcss-nested": "*",
+    "postcss-smart-import": "*",
     "react": "*",
     "react-dom": "*",
     "react-redux": "*",
@@ -32,8 +38,6 @@
     "react-router-redux": "*",
     "redux": "*",
     "style-loader": "*",
-    "postcss-loader": "*",
-    "webpack": "*",
-    "react-router-redux": "*"
+    "webpack": "*"
   }
 }
