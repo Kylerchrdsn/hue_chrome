@@ -9504,27 +9504,29 @@ module.exports = __webpack_require__(19);
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+"use strict";
 
-// load the styles
-var content = __webpack_require__(186);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(187)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!./node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!./node_modules/postcss-loader/index.js!./app.css", function() {
-			var newContent = require("!!./node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!./node_modules/postcss-loader/index.js!./app.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _root = __webpack_require__(188);
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Root = function Root() {
+  return React.createElement(
+    "div",
+    { className: _root2.default.wrapper },
+    React.createElement("div", { className: _root2.default.status }),
+    React.createElement("img", { id: "image-result", hidden: true })
+  );
+};
+
+exports.default = Root;
 
 /***/ }),
 /* 83 */
@@ -9539,20 +9541,14 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(80);
 
-var _app = __webpack_require__(82);
+var _root = __webpack_require__(82);
 
-var _app2 = _interopRequireDefault(_app);
+var _root2 = _interopRequireDefault(_root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = document.getElementById('app');
-
-(0, _reactDom.render)(_react2.default.createElement(
-  'div',
-  null,
-  _react2.default.createElement('div', { className: 'status' }),
-  _react2.default.createElement('img', { id: 'image-result', hidden: true })
-), app);
+(0, _reactDom.render)(_react2.default.createElement(_root2.default, null), app);
 
 /***/ }),
 /* 84 */
@@ -23965,11 +23961,12 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  font-family: \"Segoe UI\", \"Lucida Grande\", Tahoma, sans-serif;\n  font-size: 100%;\n}\n\n.___app__status___1Ftyt {\n  /* avoid an excessively wide status text */\n  white-space: pre;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  max-width: 400px;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: \"Segoe UI\", \"Lucida Grande\", Tahoma, sans-serif;\n  font-size: 100%;\n}\n\n.presentation-___root__wrapper___1Oder {\n  width: 500px;\n  height: 1000px;\n}\n\n.presentation-___root__status___3SMx6 {\n  /* avoid an excessively wide status text */\n  white-space: pre;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  max-width: 400px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"status": "___app__status___1Ftyt"
+	"wrapper": "presentation-___root__wrapper___1Oder",
+	"status": "presentation-___root__status___3SMx6"
 };
 
 /***/ }),
@@ -24267,6 +24264,32 @@ function updateLink(linkElement, options, obj) {
 		URL.revokeObjectURL(oldSrc);
 }
 
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(186);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(187)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../node_modules/postcss-loader/index.js!./root.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../node_modules/postcss-loader/index.js!./root.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);
