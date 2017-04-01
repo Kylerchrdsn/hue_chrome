@@ -1,8 +1,37 @@
+import React, { Component } from 'react'
+import update from 'react-addons-update'
 import styles from './root.css'
+import Header from './header.jsx'
+import BridgeList from './bridge_list.jsx'
 
-const Root = () => <div className={ styles.wrapper }>
-  <div className={ styles.status }></div>
-  <img id="image-result" hidden />
-</div>
 
-export default Root
+export default class Root extends Component {
+
+  constructor() {
+    super()
+
+    const hueNupnp = 'https://www.meethue.com/api/nupnp'
+    this.state = {
+      bridges: []
+    }
+
+    fetch(hueNupnp).then((resp) => {
+      resp.json().then((json) => {
+        this.setState(update(this.state, {
+          bridges: { $set: json }
+        }))
+      })
+    })
+  }
+
+  render() {
+    console.log('RENDER')
+    return <div className={ styles.wrapper }>
+      <Header />
+      <main className={ styles.main }>
+        <BridgeList bridges={ this.state.bridges } />
+        <div className={ styles.enterIp }>or enter your bridge ID</div>
+      </main>
+    </div>
+  }
+}

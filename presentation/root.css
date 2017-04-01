@@ -1,17 +1,43 @@
+@font-face {
+  font-family: Noto;
+  src: url(assets/fonts/NotoSansUI-Regular.ttf)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  background: #EDE7F6;
+  font-family: Noto, serif;
   font-size: 100%;
 }
 
 .wrapper {
+  height: 500px;
   width: 500px;
-  height: 1000px;
 }
 
-.status {
-  /* avoid an excessively wide status text */
-  white-space: pre;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 400px;
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.enterIp {
+  flex: 1;
+  padding: 10px;
+}
+.enterIp {
+  position: relative;
+}
+.enterIp:before {
+  border-top: solid 1px #bbb;
+  content: '';
+  height: 1px;
+  left: 5%;
+  position: absolute;
+  top: 0;
+  width: 90%;
 }

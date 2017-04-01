@@ -4,7 +4,7 @@ var config = {
   entry: 'app.jsx',
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: 'index.js'
   },
   resolve: {
     modules: [__dirname, 'node_modules'],
@@ -12,6 +12,12 @@ var config = {
   },
   module: {
     rules: [
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        use: [
+          { loader: 'file-loader?name=public/fonts/[name].[ext]' }
+        ]
+      },
       {
         test: /\.jsx?/,
         include: __dirname,
