@@ -28,20 +28,3 @@ body {
   flex-direction: column;
   height: 100%;
 }
-
-.enterIp {
-  flex: 1;
-  padding: 10px;
-}
-.enterIp {
-  position: relative;
-}
-.enterIp:before {
-  border-top: solid 1px #bbb;
-  content: '';
-  height: 1px;
-  left: 5%;
-  position: absolute;
-  top: 0;
-  width: 90%;
-}

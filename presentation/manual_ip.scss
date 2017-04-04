@@ -1,0 +1,20 @@
+.enter-ip {
+  flex: 1;
+  padding: 10px;
+  position: relative;
+
+  &::before {
+    border-top: solid 1px $grey-light;
+    content: '';
+    height: 1px;
+    left: 5%;
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+}
+
+
+.input {
+  position: relative;
+}

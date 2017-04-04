@@ -1,0 +1,24 @@
+.bridge-list {
+  flex: 1;
+  padding: 10px;
+}
+
+.header {
+  font-family: NotoI, Noto, sans-serif;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  opacity: .7;
+  text-align: center;
+}
+
+.bridge {
+  border: solid 1px $grey-light;
+  box-shadow: 0 $one-dp $two-dp $grey-dark;
+  display: block;
+  padding: 10px;
+  transition: box-shadow .25s;
+
+  &:hover {
+    box-shadow: 0 $three-dp $four-dp $grey-dark;
+  }
+}

@@ -26,10 +26,18 @@ var config = {
 				}
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]' },
+          {
+            loader: 'sass-loader',
+            options: {
+							data: '@import "theme/variables";',
+              includePaths: [ __dirname ],
+              outputStyle: 'compressed'
+            }
+          },
           { loader: 'postcss-loader' }
         ]
       }

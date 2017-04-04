@@ -2,8 +2,8 @@
 import React, { Component } from 'react'
 import update from 'react-addons-update'
 /* Styles */
-import styles from './root.css'
-import bStyles from './bridge_list.css'
+import styles from './root.scss'
+import bStyles from './bridge_list.scss'
 /* Components */
 import Header from './header.jsx'
 import BridgeList from './bridge_list.jsx'
