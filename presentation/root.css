@@ -2,6 +2,10 @@
   font-family: Noto;
   src: url(assets/fonts/NotoSansUI-Regular.ttf)
 }
+@font-face {
+  font-family: NotoI;
+  src: url(assets/fonts/NotoSansUI-Italic.ttf)
+}
 
 * {
   margin: 0;

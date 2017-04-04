@@ -4,6 +4,20 @@
 }
 
 .header {
-  text-align: center;
+  font-family: NotoI, Noto, sans-serif;
+  margin-bottom: 10px;
+  margin-top: 10px;
   opacity: 0.7;
+  text-align: center;
+}
+
+.bridge {
+  border: solid 1px #ccc;
+  box-shadow: 0px 1.62px 3.24px #888;
+  display: block;
+  padding: 10px;
+  transition: box-shadow 0.25s;
+}
+.bridge:hover {
+  box-shadow: 0px 4.86px 6.48px #888;
 }
