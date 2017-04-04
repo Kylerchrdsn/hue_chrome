@@ -1,0 +1,39 @@
+.enter-ip {
+  font-family: NotoI, Noto, sans-serif;
+  padding: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  opacity: .7;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    border-top: solid 1px $grey-light;
+    content: '';
+    height: 1px;
+    left: 5%;
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+
+  > div {
+    flex: 1;
+  }
+}
+
+.input {
+  background: initial;
+  border: 0;
+  border-bottom: solid 1px $grey-light;
+  font-size: $sp-body;
+  outline: 0;
+  position: relative;
+  padding: 5px;
+}

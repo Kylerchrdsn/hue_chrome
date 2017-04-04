@@ -2,12 +2,11 @@
 import React, { Component } from 'react'
 import update from 'react-addons-update'
 /* Styles */
-import styles from './root.scss'
-import bStyles from './bridge_list.scss'
+import styles from 'presentation/root.scss'
+/* Pages */
+import FindBridge from 'pages/find_bridge.jsx'
 /* Components */
-import Header from './header.jsx'
-import BridgeList from './bridge_list.jsx'
-import ManualIp from './manual_ip.jsx'
+import Header from 'presentation/header.jsx'
 
 
 export default class Root extends Component {
@@ -17,7 +16,8 @@ export default class Root extends Component {
 
     const hueNupnp = 'https://www.meethue.com/api/nupnp'
     this.state = {
-      bridges: []
+      bridges: [],
+      page: 'findBridge'
     }
 
     fetch(hueNupnp).then((resp) => {
@@ -31,11 +31,18 @@ export default class Root extends Component {
 
   //========================
   render() {
+    let page = null
+    switch (this.state.bridge) {
+      case 'findBridge':
+        page = <FindBridge bridges={ this.state.bridges } />
+      default:
+        page = <FindBridge bridges={ this.state.bridges } />
+    }
+
     return <div className={ styles.wrapper }>
       <Header />
       <main className={ styles.main }>
-        <BridgeList bridges={ this.state.bridges } />
-        <ManualIp />
+        { page }
       </main>
     </div>
   }

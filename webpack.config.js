@@ -33,7 +33,7 @@ var config = {
           {
             loader: 'sass-loader',
             options: {
-							data: '@import "theme/variables";',
+							data: '@import "theme/main";',
               includePaths: [ __dirname ],
               outputStyle: 'compressed'
             }

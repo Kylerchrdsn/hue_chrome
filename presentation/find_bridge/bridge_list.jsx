@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './bridge_list.scss'
+import styles from 'presentation/find_bridge/bridge_list.scss'
 
 const BridgeList = ({ bridges }) => <div className={ styles.bridgeList }>
   <div className={ styles.header }>

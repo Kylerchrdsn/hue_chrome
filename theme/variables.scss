@@ -1,3 +1,5 @@
+// Colors
+//************************
 $primary: #673ab7;
 $primary-dark: #4527a0;
 $primary-light: #ede7f6;
@@ -6,7 +8,10 @@ $accent: #0091ea;
 
 $grey-dark: #888;
 $grey-light: #ccc;
+//************************
 
+// Depth
+//************************
 $one-dp: 1.62px;
 $two-dp: calc(2 * 1.62px);
 $three-dp: calc(3 * 1.62px);
@@ -18,3 +23,12 @@ $eight-dp: calc(8 * 1.62px);
 $nine-dp: calc(9 * 1.62px);
 $ten-dp: calc(10 * 1.62px);
 $eleven-dp: calc(11 * 1.62px);
+//************************
+
+// Sizing
+//************************
+$sp-app-bar: calc(20 * 1.62 * 1px);
+$sp-button: calc(14 * 1.62 * 1px);
+$sp-sub-heading: calc(15 * 1.62 * 1px);
+$sp-body: calc(13 * 1.62 * 1px);
+//************************

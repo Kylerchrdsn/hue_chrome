@@ -1,0 +1,21 @@
+@import 'theme/variables';
+
+@font-face {
+  font-family: Noto;
+  src: url('assets/fonts/NotoSansUI-Regular.ttf');
+}
+@font-face {
+  font-family: NotoI;
+  src: url('assets/fonts/NotoSansUI-Italic.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $primary-light;
+  font-family: Noto, sans-serif;
+  font-size: $sp-body;
+}

@@ -1,26 +1,6 @@
-@font-face {
-  font-family: Noto;
-  src: url(assets/fonts/NotoSansUI-Regular.ttf)
-}
-@font-face {
-  font-family: NotoI;
-  src: url(assets/fonts/NotoSansUI-Italic.ttf)
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #EDE7F6;
-  font-family: Noto, serif;
-  font-size: 100%;
-}
-
 .wrapper {
   height: 500px;
-  width: 500px;
+  width: 600px;
 }
 
 .main {
