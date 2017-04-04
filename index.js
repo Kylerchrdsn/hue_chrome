@@ -9913,6 +9913,10 @@ var _header = __webpack_require__(193);
 
 var _header2 = _interopRequireDefault(_header);
 
+var _main = __webpack_require__(211);
+
+var _main2 = _interopRequireDefault(_main);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9972,8 +9976,8 @@ var Root = function (_Component) {
         { className: _root2.default.wrapper },
         _react2.default.createElement(_header2.default, null),
         _react2.default.createElement(
-          'main',
-          { className: _root2.default.main },
+          _main2.default,
+          null,
           page
         )
       );
@@ -24517,12 +24521,11 @@ exports = module.exports = __webpack_require__(26)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face{font-family:Noto;src:url(" + __webpack_require__(200) + ")}@font-face{font-family:NotoI;src:url(" + __webpack_require__(199) + ")}*{margin:0;padding:0}body{background:#ede7f6;font-family:Noto, sans-serif;font-size:calc(13 * 1.62 * 1px)}.presentation-___root__wrapper___1Kydz{height:500px;width:600px}.presentation-___root__main___2KBQ8{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%}\n", ""]);
+exports.push([module.i, "@font-face{font-family:Noto;src:url(" + __webpack_require__(200) + ")}@font-face{font-family:NotoI;src:url(" + __webpack_require__(199) + ")}*{margin:0;padding:0}body{background:#ede7f6;font-family:Noto, sans-serif;font-size:calc(13 * 1.62 * 1px)}.presentation-___root__wrapper___1Kydz{height:500px;width:600px}\n", ""]);
 
 // exports
 exports.locals = {
-	"wrapper": "presentation-___root__wrapper___1Kydz",
-	"main": "presentation-___root__main___2KBQ8"
+	"wrapper": "presentation-___root__wrapper___1Kydz"
 };
 
 /***/ }),
@@ -24605,6 +24608,10 @@ var _react = __webpack_require__(20);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _wrapper = __webpack_require__(214);
+
+var _wrapper2 = _interopRequireDefault(_wrapper);
+
 var _bridge_list = __webpack_require__(205);
 
 var _bridge_list2 = _interopRequireDefault(_bridge_list);
@@ -24618,7 +24625,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var FindBridge = function FindBridge(_ref) {
    var bridges = _ref.bridges;
    return _react2.default.createElement(
-      'div',
+      _wrapper2.default,
       null,
       _react2.default.createElement(_bridge_list2.default, { bridges: bridges }),
       _react2.default.createElement(_manual_ip2.default, null)
@@ -24808,6 +24815,154 @@ if(false) {
 	if(!content.locals) {
 		module.hot.accept("!!../../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../../node_modules/sass-loader/lib/loader.js??ref--2-2!../../node_modules/postcss-loader/index.js!./manual_ip.scss", function() {
 			var newContent = require("!!../../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../../node_modules/sass-loader/lib/loader.js??ref--2-2!../../node_modules/postcss-loader/index.js!./manual_ip.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(20);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _main = __webpack_require__(213);
+
+var _main2 = _interopRequireDefault(_main);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Main = function Main(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    'main',
+    { className: _main2.default.main },
+    children
+  );
+};
+
+exports.default = Main;
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(26)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face{font-family:Noto;src:url(" + __webpack_require__(200) + ")}@font-face{font-family:NotoI;src:url(" + __webpack_require__(199) + ")}*{margin:0;padding:0}body{background:#ede7f6;font-family:Noto, sans-serif;font-size:calc(13 * 1.62 * 1px)}.presentation-layout-___main__main___3mmMG{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%}\n", ""]);
+
+// exports
+exports.locals = {
+	"main": "presentation-layout-___main__main___3mmMG"
+};
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(212);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(33)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../../node_modules/sass-loader/lib/loader.js??ref--2-2!../../node_modules/postcss-loader/index.js!./main.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../../node_modules/sass-loader/lib/loader.js??ref--2-2!../../node_modules/postcss-loader/index.js!./main.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 214 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(20);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _wrapper = __webpack_require__(216);
+
+var _wrapper2 = _interopRequireDefault(_wrapper);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Wrapper = function Wrapper(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    'div',
+    { className: _wrapper2.default.wrapper },
+    children
+  );
+};
+
+exports.default = Wrapper;
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(26)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face{font-family:Noto;src:url(" + __webpack_require__(200) + ")}@font-face{font-family:NotoI;src:url(" + __webpack_require__(199) + ")}*{margin:0;padding:0}body{background:#ede7f6;font-family:Noto, sans-serif;font-size:calc(13 * 1.62 * 1px)}.presentation-layout-___wrapper__wrapper___19xHn{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;min-height:100%}\n", ""]);
+
+// exports
+exports.locals = {
+	"wrapper": "presentation-layout-___wrapper__wrapper___19xHn"
+};
+
+/***/ }),
+/* 216 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(215);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(33)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../../node_modules/sass-loader/lib/loader.js??ref--2-2!../../node_modules/postcss-loader/index.js!./wrapper.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js?importLoaders=1&camelCase&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]!../../node_modules/sass-loader/lib/loader.js??ref--2-2!../../node_modules/postcss-loader/index.js!./wrapper.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

@@ -7,6 +7,7 @@ import styles from 'presentation/root.scss'
 import FindBridge from 'pages/find_bridge.jsx'
 /* Components */
 import Header from 'presentation/header.jsx'
+import Main from 'presentation/layout/main.jsx'
 
 
 export default class Root extends Component {
@@ -41,9 +42,9 @@ export default class Root extends Component {
 
     return <div className={ styles.wrapper }>
       <Header />
-      <main className={ styles.main }>
+      <Main>
         { page }
-      </main>
+      </Main>
     </div>
   }
 }
